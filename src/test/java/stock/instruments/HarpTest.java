@@ -5,48 +5,47 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class GuitarTest {
+public class HarpTest {
 
-    Guitar guitar;
+    Harp harp;
 
     @Before
     public void before() {
-        guitar = new Guitar("guitar", "Yamaha", 50, 75, "wood",
+        harp = new Harp("harp", "Clive Morley Harps", 500, 600, "wood",
                 "brown", "string instrument");
     }
 
     @Test
     public void hasBuyingPrice() {
-        assertEquals(50, guitar.getBuyingPrice(), 00.1);
+        assertEquals(500, harp.getBuyingPrice(), 00.1);
     }
 
     @Test
     public void canSetBuyingPrice () {
-        guitar.setBuyingPrice(70);
-        assertEquals(70, guitar.getBuyingPrice(), 00.1);
+        harp.setBuyingPrice(400);
+        assertEquals(400, harp.getBuyingPrice(), 00.1);
 
 
     }
     @Test
     public void hasSellingPrice() {
-        assertEquals(75, guitar.getSellingPrice(), 00.1);
+        assertEquals(600, harp.getSellingPrice(), 00.1);
     }
 
     @Test
     public void canChangeSellingPrice() {
-        guitar.setSellingPrice(100);
-        assertEquals(100, guitar.getSellingPrice(), 00.1);
+        harp.setSellingPrice(800);
+        assertEquals(800, harp.getSellingPrice(), 00.1);
     }
 
     @Test
     public void canCalculateMarkup () {
-        assertEquals(25, guitar.calculateMarkup(guitar), 00.1);
+        assertEquals(100, harp.calculateMarkup(harp), 00.1);
 
     }
 
     @Test
     public void canPlay() {
-        assertEquals("tingtingtingcwingclaaaang", guitar.Play());
+        assertEquals("laaaalaaaleeeeleeeloolooo", harp.Play());
     }
-
 }

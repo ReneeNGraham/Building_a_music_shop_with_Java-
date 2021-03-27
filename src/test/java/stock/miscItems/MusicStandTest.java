@@ -5,18 +5,18 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class GuitarStringsTest {
+public class MusicStandTest {
 
-    GuitarStrings guitarStrings;
+    MusicStand musicStand;
 
     @Before
     public void before() {
-        guitarStrings = new GuitarStrings("guitar accessory", "Yamaha", 20, 24);
+        musicStand = new MusicStand("sound accessory", "Casio", 10, 15);
     }
 
     @Test
     public void canCalculateMarkUp() {
-        assertEquals(4, guitarStrings.calculateMarkup(guitarStrings), 0.0);
+        assertEquals(5, musicStand.calculateMarkup(musicStand), 0.0);
 
     }
 }

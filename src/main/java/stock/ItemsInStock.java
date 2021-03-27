@@ -50,9 +50,11 @@ public abstract class ItemsInStock implements ISell {
 
 
     public double calculateMarkup(ItemsInStock itemsInStock) {
-        double markup = itemsInStock.getBuyingPrice() * 1.5;
-        sellingPrice = this.getSellingPrice() + markup;
-        return markup;
+        double markUp = this.getSellingPrice() - this.getBuyingPrice();
+        return markUp;
+
+//       - calculate a markup of 20 percent added to buying price -  double markup = itemsInStock.getBuyingPrice() * 1.2;
+//        sellingPrice = this.getSellingPrice() + markup;
     }
 
 

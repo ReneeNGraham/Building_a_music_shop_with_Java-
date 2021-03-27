@@ -5,48 +5,48 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class GuitarTest {
+public class FluteTest {
 
-    Guitar guitar;
+    Flute flute;
 
     @Before
     public void before() {
-        guitar = new Guitar("guitar", "Yamaha", 50, 75, "wood",
+        flute = new Flute("silver", "Altus",60 , 72, "wood",
                 "brown", "string instrument");
     }
 
     @Test
     public void hasBuyingPrice() {
-        assertEquals(50, guitar.getBuyingPrice(), 00.1);
+        assertEquals(60, flute.getBuyingPrice(), 00.1);
     }
 
     @Test
     public void canSetBuyingPrice () {
-        guitar.setBuyingPrice(70);
-        assertEquals(70, guitar.getBuyingPrice(), 00.1);
+        flute.setBuyingPrice(80);
+        assertEquals(80, flute.getBuyingPrice(), 00.1);
 
 
     }
     @Test
     public void hasSellingPrice() {
-        assertEquals(75, guitar.getSellingPrice(), 00.1);
+        assertEquals(72, flute.getSellingPrice(), 00.1);
     }
 
     @Test
     public void canChangeSellingPrice() {
-        guitar.setSellingPrice(100);
-        assertEquals(100, guitar.getSellingPrice(), 00.1);
+        flute.setSellingPrice(100);
+        assertEquals(100, flute.getSellingPrice(), 00.1);
     }
 
     @Test
     public void canCalculateMarkup () {
-        assertEquals(25, guitar.calculateMarkup(guitar), 00.1);
+        assertEquals(12, flute.calculateMarkup(flute), 00.1);
 
     }
 
     @Test
     public void canPlay() {
-        assertEquals("tingtingtingcwingclaaaang", guitar.Play());
+        assertEquals("toootooooteeeetooooteeetooo", flute.Play());
     }
 
 }
